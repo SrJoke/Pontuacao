@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="estilo1.css">
+    <title>PONTUACAO</title>
+</head>
+<body>
+
+<h2>Resultado:</h2>
+
+<p id="resul"></p>
+<p id="resul2"></p>
+<p id="resul3"></p>
+<p id="resul4"></p>
+<p id="resul5"></p>
+<p id="resul6"></p>
+<p id="resul7"></p>
+
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const valor1 = parseInt(urlParams.get('valor1'));
+    const valor2 = parseInt(urlParams.get('valor2'));
+    const valor3 = parseInt(urlParams.get('valor3'));
+    const valor4 = parseInt(urlParams.get('valor4'));
+    const valor5 = parseInt(urlParams.get('valor5'));
+    const valor6 = parseInt(urlParams.get('valor6'));
+    const valor7 = parseInt(urlParams.get('valor7'));
+
+    const v1 = parseInt(urlParams.get('v1'));
+    const v2 = parseInt(urlParams.get('v2'));
+    const v3 = parseInt(urlParams.get('v3'));
+    const v4 = parseInt(urlParams.get('v4'));
+    const v5 = parseInt(urlParams.get('v5'));
+    const v6 = parseInt(urlParams.get('v6'));
+    const v7 = parseInt(urlParams.get('v7'));
+
+    const a1 = parseInt(urlParams.get('a1'));
+    const a2 = parseInt(urlParams.get('a2'));
+    const a3 = parseInt(urlParams.get('a3'));
+    const a4 = parseInt(urlParams.get('a4'));
+    const a5 = parseInt(urlParams.get('a5'));
+    const a6 = parseInt(urlParams.get('a6'));
+    const a7 = parseInt(urlParams.get('a7'));
+
+    const b1 = parseInt(urlParams.get('b1'));
+    const b2 = parseInt(urlParams.get('b2'));
+    const b3 = parseInt(urlParams.get('b3'));
+    const b4 = parseInt(urlParams.get('b4'));
+    const b5 = parseInt(urlParams.get('b5'));
+    const b6 = parseInt(urlParams.get('b6'));
+    const b7 = parseInt(urlParams.get('b7'));
+
+    const c1 = parseInt(urlParams.get('c1'));
+    const c2 = parseInt(urlParams.get('c2'));
+    const c3 = parseInt(urlParams.get('c3'));
+    const c4 = parseInt(urlParams.get('c4'));
+    const c5 = parseInt(urlParams.get('c5'));
+    const c6 = parseInt(urlParams.get('c6'));
+    const c7 = parseInt(urlParams.get('c7'));
+
+    const d1 = parseInt(urlParams.get('d1'));
+    const d2 = parseInt(urlParams.get('d2'));
+    const d3 = parseInt(urlParams.get('d3'));
+    const d4 = parseInt(urlParams.get('d4'));
+    const d5 = parseInt(urlParams.get('d5'));
+    const d6 = parseInt(urlParams.get('d6'));
+    const d7 = parseInt(urlParams.get('d7'));
+
+    const e1 = parseInt(urlParams.get('e1'));
+    const e2 = parseInt(urlParams.get('e2'));
+    const e3 = parseInt(urlParams.get('e3'));
+    const e4 = parseInt(urlParams.get('e4'));
+    const e5 = parseInt(urlParams.get('e5'));
+    const e6 = parseInt(urlParams.get('e6'));
+    const e7 = parseInt(urlParams.get('e7'));
+
+    const f1 = parseInt(urlParams.get('f1'));
+    const f2 = parseInt(urlParams.get('f2'));
+    const f3 = parseInt(urlParams.get('f3'));
+    const f4 = parseInt(urlParams.get('f4'));
+    const f5 = parseInt(urlParams.get('f5'));
+    const f6 = parseInt(urlParams.get('f6'));
+    const f7 = parseInt(urlParams.get('f7'));
+
+    const g1 = parseInt(urlParams.get('g1'));
+    const g2 = parseInt(urlParams.get('g2'));
+    const g3 = parseInt(urlParams.get('g3'));
+    const g4 = parseInt(urlParams.get('g4'));
+    const g5 = parseInt(urlParams.get('g5'));
+    const g6 = parseInt(urlParams.get('g6'));
+    const g7 = parseInt(urlParams.get('g7'));
+
+    const h1 = parseInt(urlParams.get('h1'));
+    const h2 = parseInt(urlParams.get('h2'));
+    const h3 = parseInt(urlParams.get('h3'));
+    const h4 = parseInt(urlParams.get('h4'));
+    const h5 = parseInt(urlParams.get('h5'));
+    const h6 = parseInt(urlParams.get('h6'));
+    const h7 = parseInt(urlParams.get('h7'));
+
+    const i1 = parseInt(urlParams.get('i1'));
+    const i2 = parseInt(urlParams.get('i2'));
+    const i3 = parseInt(urlParams.get('i3'));
+    const i4 = parseInt(urlParams.get('i4'));
+    const i5 = parseInt(urlParams.get('i5'));
+    const i6 = parseInt(urlParams.get('i6'));
+    const i7 = parseInt(urlParams.get('i7'));
+
+    const j1 = parseInt(urlParams.get('j1'));
+    const j2 = parseInt(urlParams.get('j2'));
+    const j3 = parseInt(urlParams.get('j3'));
+    const j4 = parseInt(urlParams.get('j4'));
+    const j5 = parseInt(urlParams.get('j5'));
+    const j6 = parseInt(urlParams.get('j6'));
+    const j7 = parseInt(urlParams.get('j7'));
+
+
+    const resul = valor1 + v1 + a1 + b1 + c1 + d1 + e1 + f1 + g1 + h1 + i1 + j1;
+    const resul2 = valor2 + v2 + a2 + b2 + c2 + d2 + e2 + f2 + g2 + h2 + i2 + j2;
+    const resul3 = valor3 + v3 + a3 + b3 + c3 + d3 + e3 + f3 + g3 + h3 + i3 + j3;
+    const resul4 = valor4 + v4 + a4 + b4 + c4 + d4 + e4 + f4 + g4 + h4 + i4 + j4;
+    const resul5 = valor5 + v5 + a5 + b5 + c5 + d5 + e5 + f5 + g5 + h5 + i5 + j5;
+    const resul6 = valor6 + v6 + a6 + b6 + c6 + d6 + e6 + f6 + g6 + h6 + i6 + j6;
+    const resul7 = valor7 + v7 + a7 + b7 + c7 + d7 + e7 + f7 + g7 + h7 + i7 + j7;
+
+
+    
+    document.getElementById("resul").innerHTML = "Total Grupo 1 : " + resul;
+    document.getElementById("resul2").innerHTML = "Total Grupo 2 : " + resul2;
+    document.getElementById("resul3").innerHTML = "Total Grupo 3 : " + resul3;
+    document.getElementById("resul4").innerHTML = "Total Grupo 4 : " + resul4;
+    document.getElementById("resul5").innerHTML = "Total Grupo 5 : " + resul5;
+    document.getElementById("resul6").innerHTML = "Total Grupo 6 : " + resul6;
+    document.getElementById("resul7").innerHTML = "Total Grupo 7 : " + resul7;
+
+
+</script>
+</body>
+</html>

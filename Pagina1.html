@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="estilo.css">
+    <title>Pontuacao</title>
+</head>
+<body>
+
+    <h1>Cronometro Regressivo</h1>
+    <p id="tempo">00:00</p>
+    <button onclick="iniciarCronometro()">Iniciar</button>
+    <button onclick="pararCronometro()">Parar</button>
+    <button onclick="reiniciarCronometro()">Reiniciar</button>
+    <button onclick="aumentarTempo(5)">+5 segundos</button>
+    <button onclick="aumentarTempo(10)">+10 segundos</button>
+    <button onclick="aumentarTempo(15)">+15 segundos</button>
+
+    <script>
+        var cronometro;
+        var tempo = 40;
+
+        function iniciarCronometro() {
+            if (!cronometro) {
+                cronometro = setInterval(atualizarTempo, 1000);
+            }
+        }
+
+        function pararCronometro() {
+            clearInterval(cronometro);
+            cronometro = null;
+        }
+
+        function reiniciarCronometro() {
+            pararCronometro();
+            tempo = 40;
+            atualizarTempo();
+        }
+
+        function aumentarTempo(segundos) {
+            tempo += segundos;
+            atualizarTempo();
+        }
+
+        function atualizarTempo() {
+            if (tempo === 0) {
+                pararCronometro();
+                return;
+            }
+
+            tempo--;
+            var minutos = Math.floor(tempo / 60);
+            var segundos = tempo % 60;
+
+            var formatoTempo = padZero(minutos) + ":" + padZero(segundos);
+            document.getElementById("tempo").textContent = formatoTempo;
+        }
+
+        function padZero(valor) {
+            return valor < 10 ? "0" + valor : valor;
+        }
+    </script>
+
+    <h1>Primeira partida</h1>
+    <form action="resultado.html" method="get">
+        <label for="valor1">Grupo 1:</label>
+        <input type="number" id="valor1" name="valor1"><br><br>
+        
+        <label for="valor2">Grupo 2:</label>
+        <input type="number" id="valor2" name="valor2"><br><br>
+
+        <label for="valor3">Grupo 3:</label>
+        <input type="number" id="valor3" name="valor3"><br><br>
+
+        <label for="valor4">Grupo 4:</label>
+        <input type="number" id="valor4" name="valor4"><br><br>
+
+        <label for="valor5">Grupo 5:</label>
+        <input type="number" id="valor5" name="valor5"><br><br>
+
+        <label for="valor6">Grupo 6:</label>
+        <input type="number" id="valor6" name="valor6"><br><br>
+
+        <label for="valor7">Grupo 7:</label>
+        <input type="number" id="valor7" name="valor7"><br><br>
+
+        <h1>Segunda Partida</h1>
+
+        <label for="v1">Grupo 1:</label>
+        <input type="number" id="v1" name="v1"><br><br>
+        
+        <label for="v2">Grupo 2:</label>
+        <input type="number" id="v2" name="v2"><br><br>
+
+        <label for="v3">Grupo 3:</label>
+        <input type="number" id="v3" name="v3"><br><br>
+
+        <label for="v4">Grupo 4:</label>
+        <input type="number" id="v4" name="v4"><br><br>
+
+        <label for="v5">Grupo 5:</label>
+        <input type="number" id="v5" name="v5"><br><br>
+
+        <label for="v6">Grupo 6:</label>
+        <input type="number" id="v6" name="v6"><br><br>
+
+        <label for="v7">Grupo 7:</label>
+        <input type="number" id="v7" name="v7"><br><br>
+
+        <h1>Terceira Partida</h1>
+
+        <label for="a1">Grupo 1:</label>
+        <input type="number" id="a1" name="a1"><br><br>
+        
+        <label for="a2">Grupo 2:</label>
+        <input type="number" id="a2" name="a2"><br><br>
+
+        <label for="a3">Grupo 3:</label>
+        <input type="number" id="a3" name="a3"><br><br>
+
+        <label for="a4">Grupo 4:</label>
+        <input type="number" id="a4" name="a4"><br><br>
+
+        <label for="a5">Grupo 5:</label>
+        <input type="number" id="a5" name="a5"><br><br>
+
+        <label for="a6">Grupo 6:</label>
+        <input type="number" id="a6" name="a6"><br><br>
+
+        <label for="a7">Grupo 7:</label>
+        <input type="number" id="a7" name="a7"><br><br>
+
+        <h1> Quarta Partida</h1>
+
+        <label for="b1">Grupo 1:</label>
+        <input type="number" id="b1" name="b1"><br><br>
+        
+        <label for="b2">Grupo 2:</label>
+        <input type="number" id="b2" name="b2"><br><br>
+
+        <label for="b3">Grupo 3:</label>
+        <input type="number" id="b3" name="b3"><br><br>
+
+        <label for="b4">Grupo 4:</label>
+        <input type="number" id="b4" name="b4"><br><br>
+
+        <label for="b5">Grupo 5:</label>
+        <input type="number" id="b5" name="b5"><br><br>
+
+        <label for="b6">Grupo 6:</label>
+        <input type="number" id="b6" name="b6"><br><br>
+
+        <label for="b7">Grupo 7:</label>
+        <input type="number" id="b7" name="b7"><br><br>
+
+        <h1>Quinta Partida</h1>
+
+        <label for="c1">Grupo 1:</label>
+        <input type="number" id="c1" name="c1"><br><br>
+        
+        <label for="c2">Grupo 2:</label>
+        <input type="number" id="c2" name="c2"><br><br>
+
+        <label for="c3">Grupo 3:</label>
+        <input type="number" id="c3" name="c3"><br><br>
+
+        <label for="c4">Grupo 4:</label>
+        <input type="number" id="c4" name="c4"><br><br>
+
+        <label for="c5">Grupo 5:</label>
+        <input type="number" id="c5" name="c5"><br><br>
+
+        <label for="c6">Grupo 6:</label>
+        <input type="number" id="c6" name="c6"><br><br>
+
+        <label for="c7">Grupo 7:</label>
+        <input type="number" id="c7" name="c7"><br><br>
+
+
+        <h1>Sexta Partida</h1>
+
+
+        <label for="d1">Grupo 1:</label>
+        <input type="number" id="d1" name="d1"><br><br>
+        
+        <label for="d2">Grupo 2:</label>
+        <input type="number" id="d2" name="d2"><br><br>
+
+        <label for="d3">Grupo 3:</label>
+        <input type="number" id="d3" name="d3"><br><br>
+
+        <label for="d4">Grupo 4:</label>
+        <input type="number" id="d4" name="d4"><br><br>
+
+        <label for="d5">Grupo 5:</label>
+        <input type="number" id="d5" name="d5"><br><br>
+
+        <label for="d6">Grupo 6:</label>
+        <input type="number" id="d6" name="d6"><br><br>
+
+        <label for="d7">Grupo 7:</label>
+        <input type="number" id="d7" name="d7"><br><br>
+
+        <h1>Setima Partida</h1>
+
+        <label for="e1">Grupo 1:</label>
+        <input type="number" id="e1" name="e1"><br><br>
+        
+        <label for="e2">Grupo 2:</label>
+        <input type="number" id="e2" name="e2"><br><br>
+
+        <label for="e3">Grupo 3:</label>
+        <input type="number" id="e3" name="e3"><br><br>
+
+        <label for="e4">Grupo 4:</label>
+        <input type="number" id="e4" name="e4"><br><br>
+
+        <label for="e5">Grupo 5:</label>
+        <input type="number" id="e5" name="e5"><br><br>
+
+        <label for="e6">Grupo 6:</label>
+        <input type="number" id="e6" name="e6"><br><br>
+
+        <label for="e7">Grupo 7:</label>
+        <input type="number" id="e7" name="e7"><br><br>
+
+        <h1>Oitava Partida</h1>
+
+        <label for="f1">Grupo 1:</label>
+        <input type="number" id="f1" name="f1"><br><br>
+        
+        <label for="f2">Grupo 2:</label>
+        <input type="number" id="f2" name="f2"><br><br>
+
+        <label for="f3">Grupo 3:</label>
+        <input type="number" id="f3" name="f3"><br><br>
+
+        <label for="f4">Grupo 4:</label>
+        <input type="number" id="f4" name="f4"><br><br>
+
+        <label for="f5">Grupo 5:</label>
+        <input type="number" id="f5" name="f5"><br><br>
+
+        <label for="f6">Grupo 6:</label>
+        <input type="number" id="f6" name="f6"><br><br>
+
+        <label for="f7">Grupo 7:</label>
+        <input type="number" id="f7" name="f7"><br><br>
+
+        <h1>Nona Partida</h1>
+
+        <label for="g1">Grupo 1:</label>
+        <input type="number" id="g1" name="g1"><br><br>
+        
+        <label for="g2">Grupo 2:</label>
+        <input type="number" id="g2" name="g2"><br><br>
+
+        <label for="g3">Grupo 3:</label>
+        <input type="number" id="g3" name="g3"><br><br>
+
+        <label for="g4">Grupo 4:</label>
+        <input type="number" id="g4" name="g4"><br><br>
+
+        <label for="g5">Grupo 5:</label>
+        <input type="number" id="g5" name="g5"><br><br>
+
+        <label for="g6">Grupo 6:</label>
+        <input type="number" id="g6" name="g6"><br><br>
+
+        <label for="g7">Grupo 7:</label>
+        <input type="number" id="g7" name="g7"><br><br>
+
+        <h1>Decima Partida</h1>
+
+        <label for="h1">Grupo 1:</label>
+        <input type="number" id="h1" name="h1"><br><br>
+        
+        <label for="h2">Grupo 2:</label>
+        <input type="number" id="h2" name="h2"><br><br>
+
+        <label for="h3">Grupo 3:</label>
+        <input type="number" id="h3" name="h3"><br><br>
+
+        <label for="h4">Grupo 4:</label>
+        <input type="number" id="h4" name="h4"><br><br>
+
+        <label for="h5">Grupo 5:</label>
+        <input type="number" id="h5" name="h5"><br><br>
+
+        <label for="h6">Grupo 6:</label>
+        <input type="number" id="h6" name="h6"><br><br>
+
+        <label for="h7">Grupo 7:</label>
+        <input type="number" id="h7" name="h7"><br><br>
+
+        <h1>Decima Primeira Partida</h1>
+
+        <label for="i1">Grupo 1:</label>
+        <input type="number" id="i1" name="i1"><br><br>
+        
+        <label for="i2">Grupo 2:</label>
+        <input type="number" id="i2" name="i2"><br><br>
+
+        <label for="i3">Grupo 3:</label>
+        <input type="number" id="i3" name="i3"><br><br>
+
+        <label for="i4">Grupo 4:</label>
+        <input type="number" id="i4" name="i4"><br><br>
+
+        <label for="i5">Grupo 5:</label>
+        <input type="number" id="i5" name="i5"><br><br>
+
+        <label for="i6">Grupo 6:</label>
+        <input type="number" id="i6" name="i6"><br><br>
+
+        <label for="i7">Grupo 7:</label>
+        <input type="number" id="i7" name="i7"><br><br>
+
+        <h1>Decima Segunda Partida</h1>
+
+        <label for="j1">Grupo 1:</label>
+        <input type="number" id="j1" name="j1"><br><br>
+        
+        <label for="j2">Grupo 2:</label>
+        <input type="number" id="j2" name="j2"><br><br>
+
+        <label for="j3">Grupo 3:</label>
+        <input type="number" id="j3" name="j3"><br><br>
+
+        <label for="j4">Grupo 4:</label>
+        <input type="number" id="j4" name="j4"><br><br>
+
+        <label for="j5">Grupo 5:</label>
+        <input type="number" id="j5" name="j5"><br><br>
+
+        <label for="j6">Grupo 6:</label>
+        <input type="number" id="j6" name="j6"><br><br>
+
+        <label for="j7">Grupo 7:</label>
+        <input type="number" id="j7" name="j7"><br><br>
+
+        <input type="submit" class="ver-resultados" value="VER RESULTADOS"><br><br>
+    </form>
+
+</body>
+</html>
